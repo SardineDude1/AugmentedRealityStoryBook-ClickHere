@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SixthScript : MonoBehaviour
+{
+    public Text UIText;
+
+    public GameObject RedSphere;
+    private GameObject[] CurrentOneSphere;
+    private Transform position;
+
+    public Transform positionOfNewTheOne;
+    private GameObject[] objs;
+
+    public Transform one;
+    public Transform two;
+    public Transform three;
+    public Transform four;
+
+    public void run()
+    {
+        UIText.text = "And finally, five on the blue...";
+
+        Instantiate(RedSphere, one.position, Quaternion.identity);
+        Instantiate(RedSphere, two.position, Quaternion.identity);
+        Instantiate(RedSphere, three.position, Quaternion.identity);
+        Instantiate(RedSphere, four.position, Quaternion.identity);
+
+        CurrentOneSphere = GameObject.FindGameObjectsWithTag("theOne");
+        foreach (GameObject obj in CurrentOneSphere)
+        {
+            obj.tag = "notTheOne";
+        }
+
+        objs = GameObject.FindGameObjectsWithTag("notTheOne");
+        foreach (GameObject o in objs)
+        {
+            if (o.transform.position == positionOfNewTheOne.position)
+            {
+                o.tag = "theOne";
+            }
+        }
+    }
+}
