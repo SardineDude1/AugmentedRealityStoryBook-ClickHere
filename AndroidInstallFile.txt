@@ -1,0 +1,6 @@
+#AndroidInstallFile
+
+The file exeeds the maximum size for upload so I offer you a link to the file in a google drive.
+Here is the link: https://drive.google.com/file/d/1k_HUKdyfKYo4Z7d_H1yHX21wJUTV3lrw/view?usp=sharing
+
+SHA256 Hash: 889e6a4db13555cf10f7d6b40111586c19908fca25bd11beee5c7966cc28a544
